@@ -81,7 +81,7 @@ You can see following example to use this awesome featreu easily.
 
 ```javascript
 var user = {
-            SourceUserId: "54355353534", // User unique ID in your own system
+            SourceUserId: "54355353534", // User's unique ID in your own system
             Email: "useremail@gmail.com", // User's unique email in your own system
             Phone: "+905321231212", // User's unique phone number in your own system
             Name: "My Name",
