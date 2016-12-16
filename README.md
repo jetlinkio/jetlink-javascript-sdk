@@ -1,2 +1,105 @@
-# jetlink-javascript-sdk
-Javascript SDK to add Jetlink web messeging to your own web site
+# Jetlink Javascript SDK for our Live-Web-Widget
+[![Website](https://app.jetlink.io/Assets/custom/img/jetlink_logo.png)](https://jetlink.io)
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Quick steps for Jetlink Web Widget Installation](#quick-steps-for-jetlink-web-widget-installation)
+  - [Step 1](#step-1)
+  - [Step 2](#step-2)
+- [Widget Settings](#widget-settings)
+- [Localization](#localization)
+- [User Settings](#user-settings)
+
+
+## Introduction
+
+You can use Jetlink Javascript SDK to customize our web widget for your own web site. There are lots of different options to use Jetlink live chat web widget to use with your custom needs. Appearance of web widget can be changed. And also different functionalites can be applied for how our web widget will work. 
+
+## Quick steps for Jetlink Web Widget Installation
+
+### Step 1
+Include the Jetlink plugin on your web page inside <head> tag
+```html
+<script type="text/javascript" src="https://public.jetlink.io/files/js/jetlink.min.js"></script>
+```
+
+### Step 2
+Initialize Jetlink with your App Key by adding below code before closing </body> tag
+
+```html
+<script type="text/javascript">
+    Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN");
+</script>
+```
+
+## Widget Settings
+
+* `OnlineWidgetUrl` - Change web-widget button image
+```javascript
+Jetlink.Settings.Widget.OnlineWidgetUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png";
+```
+* `ChatWindowBackgroundImageUrl` - Change chat window background image
+```javascript
+Jetlink.Settings.Widget.ChatWindowBackgroundImageUrl = "http://www.intrawallpaper.com/static/images/518164-backgrounds.jpg";
+```
+* `ChatWindowBackgroundColor` - You can change chat window background color just a one line of code
+```javascript
+Jetlink.Settings.Widget.ChatWindowBackgroundColor = "#cccccc";
+```
+* `SendButtonText` - You can change message send button text
+```javascript
+Jetlink.Settings.Widget.SendButtonText = "Send the message";
+```
+* `MessageTextBoxPlaceholder` - Placeholder text  for the textbox message written 
+```javascript
+Jetlink.Settings.Widget.MessageTextBoxPlaceholder = "Type your message...";
+```
+* `WelcomeText` - You can send a customized welcome message for live-chat visitors.
+```javascript
+Jetlink.Settings.Widget.WelcomeText = "Welcome to jetlink live support. You can type anything to us that you need help."
+```
+
+## Localization
+
+You can localize jetlink web widget with your own language settings by just the one line of code. Now, we are supporting English and Turkish. More languages are coming soon.
+
+English: This is default language. No need to do anything.
+Turkish: Just use language code as "tr"
+
+Add below code after **Jetlink.Init(...)** line
+
+```javascript
+Jetlink.Localize("tr");
+```
+
+## User Settings
+
+You can open Jetlink Web Widget with your own logged in user settings. To do this, you need to add just a few lines of code to set current user in Jetlink SDK.
+
+You can see following example to use this awesome featreu easily.
+
+```javascript
+var user = {
+            SourceUserId: "54355353534", // User unique ID in your own system
+            Email: "useremail@gmail.com", // User's unique email in your own system
+            Phone: "+905321231212", // User's unique phone number in your own system
+            Name: "My Name",
+            Surname: "My Surname"
+        };
+Jetlink.SetUser(user);
+```
+
+You need to set user information after **Jetlink.Init(...)** line
+
+## Sample Code
+```javascript
+var user = {
+            SourceUserId: "54355353534", // User unique ID in your own system
+            Email: "useremail@gmail.com", // User's unique email in your own system
+            Phone: "+905321231212", // User's unique phone number in your own system
+            Name: "My Name",
+            Surname: "My Surname"
+        };
+Jetlink.SetUser(user);
+```
+
