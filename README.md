@@ -9,7 +9,8 @@
 - [Widget Settings](#widget-settings)
 - [Localization](#localization)
 - [User Settings](#user-settings)
-
+- [Widget Rules](#widget-rules)
+- [Sample Code](#sample-code)
 
 ## Introduction
 
@@ -91,15 +92,41 @@ Jetlink.SetUser(user);
 
 You need to set user information after **Jetlink.Init(...)** line
 
+## Widget Rules
+
+You can make mandatory for email address enterence by visitors. 
+If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address. After entering email address, the visitor can start to chat with a live agent.
+
+Here is the code block.
+
+```javascript
+Jetlink.Rules.IsVisitorEmailRequired = true;
+```
+
+
+More rules for our web widget will be added on upcoming releases of our SDK. 
+
+
 ## Sample Code
 ```javascript
-var user = {
-            SourceUserId: "54355353534", // User unique ID in your own system
-            Email: "useremail@gmail.com", // User's unique email in your own system
-            Phone: "+905321231212", // User's unique phone number in your own system
-            Name: "My Name",
-            Surname: "My Surname"
+Jetlink.Settings.Widget.SendButtonText = "Send the message";
+        Jetlink.Settings.Widget.MessageTextBoxPlaceholder = "Type Here";
+        Jetlink.Settings.Widget.OnlineWidgetUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png"
+        Jetlink.Settings.Widget.WelcomeText = "Welcome to our live support system."
+        Jetlink.Settings.Widget.ChatWindowBackgroundColor = "#cccccc";
+        Jetlink.Rules.IsVisitorEmailRequired = true;
+
+        Jetlink.Init("jetlink-web-chat-11111111111", "1111111111333333333332222222");
+
+        var user = {
+            SourceUserId: "3234234324324",
+            Email: "testuser@jetlink.io",
+            Phone: "+905321231212",
+            Name: "Name here",
+            Surname: "Surname here"
         };
-Jetlink.SetUser(user);
+        Jetlink.SetUser(user);
+
+        Jetlink.Localize("tr");
 ```
 
