@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jetlink.io</title>
+</head>
+<body>
+    <h1>Live-Web Messaging Test Page</h1>
+    
+    <script src="https://public.jetlink.io/files/js/jetlink.min.js"></script>
+    <script type="text/javascript">
+        
+        Jetlink.Settings.Widget.OnlineWidgetUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png";
+        Jetlink.Settings.Widget.SendButtonText = "Send the message";
+        Jetlink.Settings.Widget.MessageTextBoxPlaceholder = "Type Here";
+
+        Jetlink.Rules.IsVisitorEmailRequired = true;
+        Jetlink.Settings.Widget.WelcomeText = "Welcome to our live support system."
+        Jetlink.Settings.Widget.ChatWindowBackgroundColor = "#cccccc";
+        Jetlink.Init("jetlink-web-chat-11111111111", "1111111111333333333332222222");
+        var user = {
+            SourceUserId: "3234234324324",
+            Email: "testuser@jetlink.io",
+            Phone: "+905321231212",
+            Name: "Name here",
+            Surname: "Surname here"
+        };
+        Jetlink.SetUser(user);
+
+        Jetlink.Localize("tr");
+    </script>
+</body>
+</html>
