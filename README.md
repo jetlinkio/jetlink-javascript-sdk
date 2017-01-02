@@ -57,7 +57,11 @@ Jetlink.Settings.Widget.MessageTextBoxPlaceholder = "Type your message...";
 ```
 * `WelcomeText` - You can send a customized welcome message for live-chat visitors.
 ```javascript
-Jetlink.Settings.Widget.WelcomeText = "Welcome to jetlink live support. You can type anything to us that you need help."
+Jetlink.Settings.Widget.WelcomeText = "Welcome to jetlink live support. You can type anything to us that you need help.";
+```
+* `Height` - You can set your live-web widget height by this property in terms of pixels.
+```javascript
+Jetlink.Settings.Widget.Height = 500;
 ```
 
 ## Localization
