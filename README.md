@@ -39,6 +39,11 @@ Initialize Jetlink with your App Key by adding below code before closing </body>
 ```javascript
 Jetlink.Settings.Widget.OnlineWidgetUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png";
 ```
+* `OnlineWidgetType` - You can change web widget image type using that property. Available Types: "Circular" or "Custom"
+By changing this proprty to "Custom", you can use our own widget image, without any changes made by Jetlink.
+```javascript
+Jetlink.Settings.Widget.OnlineWidgetType = "Custom";
+```
 * `ChatWindowBackgroundImageUrl` - Change chat window background image
 ```javascript
 Jetlink.Settings.Widget.ChatWindowBackgroundImageUrl = "http://www.intrawallpaper.com/static/images/518164-backgrounds.jpg";
