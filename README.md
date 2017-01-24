@@ -103,6 +103,7 @@ You need to set user information after **Jetlink.Init(...)** line
 
 ## Widget Rules
 
+* `IsVisitorEmailRequired`
 You can make mandatory for email address enterence by visitors. 
 If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address. After entering email address, the visitor can start to chat with a live agent.
 
@@ -110,6 +111,13 @@ Here is the code block.
 
 ```javascript
 Jetlink.Rules.IsVisitorEmailRequired = true;
+```
+
+* `HideWhenNoOnlineAgent`
+You can hide Jetlink web widget icon when no online agent in Jetlink system by this rule. It is just simple doing this by adding one line of code below.
+
+```javascript
+Jetlink.Rules.HideWhenNoOnlineAgent = true;
 ```
 
 
