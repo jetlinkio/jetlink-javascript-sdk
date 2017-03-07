@@ -68,6 +68,10 @@ Jetlink.Settings.Widget.WelcomeText = "Welcome to jetlink live support. You can 
 ```javascript
 Jetlink.Settings.Widget.Height = 500;
 ```
+* `IsRotateWhenMouseover` - You can set this property to true if you want to rotate widget image when mouse is over. 
+```javascript
+Jetlink.Settings.Widget.IsRotateWhenMouseover = true;
+```
 
 ## Localization
 
