@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Quick steps for Jetlink Web Widget Installation](#quick-step-for-jetlink-web-widget-installation)
+- [Quick step for Jetlink Web Widget Installation](#quick-step-for-jetlink-web-widget-installation)
 - [Widget Settings](#widget-settings)
 - [Localization](#localization)
 - [User Settings](#user-settings)
