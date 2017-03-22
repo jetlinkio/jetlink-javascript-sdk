@@ -1,5 +1,5 @@
 # Jetlink Javascript SDK for our Live-Web-Widget
-[![Website](https://app.jetlink.io/Assets/custom/img/jetlink_logo.png)](https://jetlink.io)
+[![Website](https://app.jetlink.io/Assets/custom/img/jetlink-logo-medium.png)](https://jetlink.io)
 ## Table of Contents
 
 - [Introduction](#introduction)
