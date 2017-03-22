@@ -16,18 +16,11 @@
 
 You can use Jetlink Javascript SDK to customize our web widget for your own web site. There are lots of different options to use Jetlink live chat web widget to use with your custom needs. Appearance of web widget can be changed. And also different functionalites can be applied for how our web widget will work. 
 
-## Quick steps for Jetlink Web Widget Installation
+## Quick step for Jetlink Web Widget Installation
 
-### Step 1
-Include the Jetlink plugin on your web page inside <head> tag
+Include the Jetlink plugin and initialization line on your web page before closing </body> tag on your all pages that you want to show Jetlink Web Widget
 ```html
 <script type="text/javascript" src="https://public.jetlink.io/files/js/jetlink.min.js"></script>
-```
-
-### Step 2
-Initialize Jetlink with your App Key by adding below code before closing </body> tag
-
-```html
 <script type="text/javascript">
     Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN");
 </script>
