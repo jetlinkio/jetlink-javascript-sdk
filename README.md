@@ -72,7 +72,7 @@ Jetlink.Options.Height = 80;
 ```javascript
 Jetlink.Options.LauncherWidth = 80;
 ```
-* `LauncherStyleBehaviour` - If LauncherStyleBehaviour has been set, LauncherHeight and LauncherWidth is applied. Launcher style behaviours : "default", "custom"
+* `LauncherStyleBehaviour` - If LauncherStyleBehaviour has been set, LauncherHeight and LauncherWidth is applied. Available Behaviours: "default" or "custom"
 ```javascript
 Jetlink.Options.LauncherStyleBehaviour = "default";
 ```
@@ -84,7 +84,7 @@ You can localize jetlink web widget with your own language settings by just the 
 Turkish: "tr"
 English: "en"
 
-Add below code after **Jetlink.Init(...)** line
+Add below code before **Jetlink.Init(...)** line
 
 ```javascript
 Jetlink.Options.Language = "tr";
