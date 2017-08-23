@@ -28,55 +28,66 @@ document.head.appendChild(_j);
 
 ## Widget Settings
 
-* `OnlineWidgetUrl` - Change web-widget button image
+* `LauncherImageUrl` - Change web-widget button image
 ```javascript
-Jetlink.Settings.Widget.OnlineWidgetUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png";
+Jetlink.Options.LauncherImageUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png";
 ```
-* `OnlineWidgetType` - You can change web widget image type using that property. Available Types: "Circular" or "Custom"
-By changing this proprty to "Custom", you can use our own widget image, without any changes made by Jetlink.
+* `LauncherType` - You can change web widget image type using that property. Available Types: "Circular" or "Cornered"
 ```javascript
-Jetlink.Settings.Widget.OnlineWidgetType = "Custom";
+Jetlink.Options.LauncherType = "Circular";
 ```
 * `ChatWindowBackgroundImageUrl` - Change chat window background image
 ```javascript
-Jetlink.Settings.Widget.ChatWindowBackgroundImageUrl = "http://www.intrawallpaper.com/static/images/518164-backgrounds.jpg";
-```
-* `ChatWindowBackgroundColor` - You can change chat window background color just a one line of code
-```javascript
-Jetlink.Settings.Widget.ChatWindowBackgroundColor = "#cccccc";
-```
-* `SendButtonText` - You can change message send button text
-```javascript
-Jetlink.Settings.Widget.SendButtonText = "Send the message";
+Jetlink.Options.ChatWindowBackgroundImageUrl = "https://openclipart.org/image/800px/svg_to_png/232120/lolipop-seamless-pattern.png";
 ```
 * `MessageTextBoxPlaceholder` - Placeholder text  for the textbox message written 
 ```javascript
-Jetlink.Settings.Widget.MessageTextBoxPlaceholder = "Type your message...";
+Jetlink.Options.MessageTextBoxPlaceholder = "Type your message...";
 ```
-* `WelcomeText` - You can send a customized welcome message for live-chat visitors.
+* `ThemeColor` - You can change widget window colors for your web site color harmony
 ```javascript
-Jetlink.Settings.Widget.WelcomeText = "Welcome to jetlink live support. You can type anything to us that you need help.";
+Jetlink.Options.ThemeColor = "#900";
 ```
-* `Height` - You can set your live-web widget height by this property in terms of pixels.
+* `FontFamily` - You can change widget font family
 ```javascript
-Jetlink.Settings.Widget.Height = 500;
+Jetlink.Options.FontFamily = "Calibri";
 ```
-* `IsRotateWhenMouseover` - You can set this property to true if you want to rotate widget image when mouse is over. 
+* `ShowEmojiButton` - You can hide or show the emoji button
 ```javascript
-Jetlink.Settings.Widget.IsRotateWhenMouseover = true;
+Jetlink.Options.ShowEmojiButton = false;
+```
+* `ShowAttachmentButton` - You can hide or show the attachment button.
+```javascript
+Jetlink.Options.ShowAttachmentButton = false;
+```
+* `Height` - You can set your live-web widget window height by this property in terms of pixels.
+```javascript
+Jetlink.Options.Height = 600;
+```
+* `LauncherHeight` - You can set your live-web widget launcher height by this property in terms of pixels.
+```javascript
+Jetlink.Options.Height = 80;
+```
+* `LauncherWidth` - You can set your live-web widget launcher width by this property in terms of pixels.
+```javascript
+Jetlink.Options.LauncherWidth = 80;
+```
+* `LauncherStyleBehaviour` - If LauncherStyleBehaviour has been set, LauncherHeight and LauncherWidth is applied. Launcher style behaviours : "default", "custom"
+```javascript
+Jetlink.Options.LauncherStyleBehaviour = "default";
 ```
 
 ## Localization
 
 You can localize jetlink web widget with your own language settings by just the one line of code. Now, we are supporting English and Turkish. More languages are coming soon.
 
-English: This is default language. No need to do anything.
-Turkish: Just use language code as "tr"
+Turkish: "tr"
+English: "en"
 
 Add below code after **Jetlink.Init(...)** line
 
 ```javascript
-Jetlink.Localize("tr");
+Jetlink.Options.Language = "tr";
 ```
 
 ## User Settings
@@ -107,30 +118,37 @@ If you add this line of code and make the property true, our web widget will ask
 Here is the code block.
 
 ```javascript
-Jetlink.Rules.IsVisitorEmailRequired = true;
+Jetlink.Options.IsVisitorEmailRequired = true;
 ```
 
-* `HideWhenNoOnlineAgent`
-You can hide Jetlink web widget icon when no online agent in Jetlink system by this rule. It is just simple doing this by adding one line of code below.
+* `HideLauncherThenOpenedChatWindow`
+You can make hide launcher then opened chat window.
+
+Here is the code block.
 
 ```javascript
-Jetlink.Rules.HideWhenNoOnlineAgent = true;
+Jetlink.Options.HideLauncherThenOpenedChatWindow = true;
 ```
 
+* `IsShowEmailAndSmsRequest`
+You can make mandatory for email address enterence by visitors. 
+If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address without required.
+
+Here is the code block.
+
+```javascript
+Jetlink.Options.IsShowEmailAndSmsRequest = true;
+```
 
 More rules for our web widget will be added on upcoming releases of our SDK. 
 
-
 ## Sample Code
 ```javascript
-Jetlink.Settings.Widget.SendButtonText = "Send the message";
-Jetlink.Settings.Widget.MessageTextBoxPlaceholder = "Type Here";
-Jetlink.Settings.Widget.OnlineWidgetUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png"
-Jetlink.Settings.Widget.WelcomeText = "Welcome to our live support system."
-Jetlink.Settings.Widget.ChatWindowBackgroundColor = "#cccccc";
-Jetlink.Rules.IsVisitorEmailRequired = true;
-
-Jetlink.Init("jetlink-web-chat-11111111111", "1111111111333333333332222222");
+Jetlink.Options.LauncherType = "cornered";
+Jetlink.Options.IsShowEmailAndSmsRequest = true;
+Jetlink.Options.ThemeColor = "#900";
+Jetlink.Options.HideLauncherThenOpenedChatWindow = false; 
+Jetlink.Options.IsVisitorEmailRequired = false;
 
 var user = {
     SourceUserId: "3234234324324",
@@ -139,9 +157,12 @@ var user = {
     Name: "Name here",
     Surname: "Surname here"
 };
+
 Jetlink.SetUser(user);
 
-Jetlink.Localize("tr");
+Jetlink.Options.Language = "en";
+
+Jetlink.Init("jetlink-web-chat-11111111111", "1111111111333333333332222222");
 ```
 
 
