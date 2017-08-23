@@ -18,9 +18,11 @@ You can use Jetlink Javascript SDK to customize our web widget for your own web 
 
 Include the Jetlink plugin and initialization line on your web page before closing </ body> tag on your all pages that you want to show Jetlink Web Widget
 ```html
-<script type="text/javascript" src="https://public.jetlink.io/files/js/jetlink.min.js"></script>
 <script type="text/javascript">
-    Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN");
+var _j = document.createElement("script");
+_j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(Date()).getTime() / 1000);
+_j.onload = function () { Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN"); };
+document.head.appendChild(_j);
 </script>
 ```
 
