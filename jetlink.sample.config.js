@@ -1,7 +1,7 @@
 Jetlink.Options.LauncherType = "cornered";
 Jetlink.Options.ShowEmailAndPhoneRequest = true;
 Jetlink.Options.ThemeColor = "#900";
-Jetlink.Options.HideLauncherWhenChatWindowOpen = false; 
+Jetlink.Options.HideLauncherWhenChatWindowIsOpen = false; 
 Jetlink.Options.IsVisitorEmailOrPhoneRequired = false;
 Jetlink.Options.Language = "en";
 
