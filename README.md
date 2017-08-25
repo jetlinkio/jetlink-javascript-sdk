@@ -28,6 +28,23 @@ document.head.appendChild(_j);
 
 ## Widget Settings
 
+**You must insert all widget customization codes above Jetlink.Init(.. line**
+```html
+<script type="text/javascript">
+var _j = document.createElement("script");
+_j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(Date()).getTime() / 1000);
+_j.onload = function () { 
+            // **JETLINK CUSTOMIZATION PART**
+            //....
+            
+            Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN"); 
+};
+document.head.appendChild(_j);
+</script>
+```
+
+**All widget settings must be written as above example**
+
 * `LauncherImageUrl` - Change web-widget button image
 ```javascript
 Jetlink.Options.LauncherImageUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png";
@@ -141,26 +158,33 @@ Jetlink.Options.ShowEmailAndPhoneRequest = true;
 More rules for our web widget will be added on upcoming releases of our SDK. 
 
 ## Sample Code
-```javascript
-Jetlink.Options.LauncherType = "cornered";
-Jetlink.Options.ShowEmailAndPhoneRequest = true;
-Jetlink.Options.ThemeColor = "#900";
-Jetlink.Options.HideLauncherWhenChatWindowOpen = false; 
-Jetlink.Options.IsVisitorEmailOrPhoneRequired = false;
+```html
+<script type="text/javascript">
+var _j = document.createElement("script");
+_j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(Date()).getTime() / 1000);
+_j.onload = function () { 
+            Jetlink.Options.LauncherType = "cornered";
+            Jetlink.Options.ShowEmailAndPhoneRequest = true;
+            Jetlink.Options.ThemeColor = "#900";
+            Jetlink.Options.HideLauncherWhenChatWindowOpen = false; 
+            Jetlink.Options.IsVisitorEmailOrPhoneRequired = false;
 
-var user = {
-    SourceUserId: "3234234324324",
-    Email: "testuser@jetlink.io",
-    Phone: "+905321231212",
-    Name: "Name here",
-    Surname: "Surname here"
+            var user = {
+                SourceUserId: "3234234324324",
+                Email: "testuser@jetlink.io",
+                Phone: "+905321231212",
+                Name: "Name here",
+                Surname: "Surname here"
+            };
+
+            Jetlink.SetUser(user);
+
+            Jetlink.Options.Language = "en";
+            
+            Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN"); 
 };
-
-Jetlink.SetUser(user);
-
-Jetlink.Options.Language = "en";
-
-Jetlink.Init("jetlink-web-chat-11111111111", "1111111111333333333332222222");
+document.head.appendChild(_j);
+</script>
 ```
 
 
