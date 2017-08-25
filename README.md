@@ -28,7 +28,7 @@ document.head.appendChild(_j);
 
 ## Widget Settings
 
-**You must insert all widget customization codes above Jetlink.Init(.. line**
+**You must insert all widget customization codes above Jetlink.Init(...) line**
 ```html
 <script type="text/javascript">
 var _j = document.createElement("script");
@@ -45,7 +45,7 @@ document.head.appendChild(_j);
 </script>
 ```
 
-**All widget settings must be written as above example**
+> **All widget settings must be written as above example**
 
 * `LauncherImageUrl` - Change web-widget button image
 ```javascript
