@@ -66,13 +66,13 @@ Jetlink.Options.Height = 600;
 ```
 * `LauncherHeight` - You can set your live-web widget launcher height by this property in terms of pixels.
 ```javascript
-Jetlink.Options.Height = 80;
+Jetlink.Options.LauncherHeight = 80;
 ```
 * `LauncherWidth` - You can set your live-web widget launcher width by this property in terms of pixels.
 ```javascript
 Jetlink.Options.LauncherWidth = 80;
 ```
-* `LauncherStyleBehaviour` - If LauncherStyleBehaviour has been set, LauncherHeight and LauncherWidth is applied. Available Behaviours: "default" or "custom"
+* `LauncherStyleBehaviour` - If LauncherStyleBehaviour has been set, LauncherHeight and LauncherWidth is applied. Available Behaviours: "default" and "custom"
 ```javascript
 Jetlink.Options.LauncherStyleBehaviour = "default";
 ```
@@ -111,33 +111,33 @@ You need to set user information after **Jetlink.Init(...)** line
 
 ## Widget Rules
 
-* `IsVisitorEmailRequired`
-You can make mandatory for email address enterence by visitors. 
-If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address. After entering email address, the visitor can start to chat with a live agent.
+* `IsVisitorEmailOrPhoneRequired`
+You can make mandatory for email address or phone number enterence by visitors. 
+If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address or phone number. After entering email address, the visitor can start to chat with a live agent.
 
 Here is the code block.
 
 ```javascript
-Jetlink.Options.IsVisitorEmailRequired = true;
+Jetlink.Options.IsVisitorEmailOrPhoneRequired = true;
 ```
 
-* `HideLauncherThenOpenedChatWindow`
+* `HideLauncherWhenChatWindowOpen`
 You can make hide launcher then opened chat window.
 
 Here is the code block.
 
 ```javascript
-Jetlink.Options.HideLauncherThenOpenedChatWindow = true;
+Jetlink.Options.HideLauncherWhenChatWindowOpen = true;
 ```
 
-* `IsShowEmailAndSmsRequest`
-You can make mandatory for email address enterence by visitors. 
-If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address without required.
+* `ShowEmailAndPhoneRequest`
+You can make mandatory for email address and phone number enterence by visitors. 
+If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address and phone number without required.
 
 Here is the code block.
 
 ```javascript
-Jetlink.Options.IsShowEmailAndSmsRequest = true;
+Jetlink.Options.ShowEmailAndPhoneRequest = true;
 ```
 
 More rules for our web widget will be added on upcoming releases of our SDK. 
@@ -145,10 +145,10 @@ More rules for our web widget will be added on upcoming releases of our SDK.
 ## Sample Code
 ```javascript
 Jetlink.Options.LauncherType = "cornered";
-Jetlink.Options.IsShowEmailAndSmsRequest = true;
+Jetlink.Options.ShowEmailAndPhoneRequest = true;
 Jetlink.Options.ThemeColor = "#900";
-Jetlink.Options.HideLauncherThenOpenedChatWindow = false; 
-Jetlink.Options.IsVisitorEmailRequired = false;
+Jetlink.Options.HideLauncherWhenChatWindowOpen = false; 
+Jetlink.Options.IsVisitorEmailOrPhoneRequired = false;
 
 var user = {
     SourceUserId: "3234234324324",
