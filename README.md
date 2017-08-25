@@ -45,7 +45,7 @@ document.head.appendChild(_j);
 </script>
 ```
 
-> **All widget settings must be written as above example**
+**All widget settings must be written as above example**
 
 * `LauncherImageUrl` - Change web-widget button image
 ```javascript
