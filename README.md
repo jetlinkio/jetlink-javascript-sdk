@@ -36,6 +36,8 @@ _j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(
 _j.onload = function () { 
             // JETLINK CUSTOMIZATION PART
             // ....
+            // Jetlink.Options.ThemeColor = "#900";
+            // ...
             
             Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN"); 
 };
