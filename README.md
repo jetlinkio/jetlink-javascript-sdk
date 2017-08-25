@@ -122,9 +122,7 @@ Jetlink.Options.IsVisitorEmailOrPhoneRequired = true;
 ```
 
 * `HideLauncherWhenChatWindowOpen`
-You can make hide launcher then opened chat window.
-
-Here is the code block.
+You can hide launcher when chat windows is opened.
 
 ```javascript
 Jetlink.Options.HideLauncherWhenChatWindowOpen = true;
