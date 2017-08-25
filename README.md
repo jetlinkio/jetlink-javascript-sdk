@@ -34,8 +34,8 @@ document.head.appendChild(_j);
 var _j = document.createElement("script");
 _j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(Date()).getTime() / 1000);
 _j.onload = function () { 
-            // **JETLINK CUSTOMIZATION PART**
-            //....
+            // JETLINK CUSTOMIZATION PART
+            // ....
             
             Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN"); 
 };
@@ -168,6 +168,7 @@ _j.onload = function () {
             Jetlink.Options.ThemeColor = "#900";
             Jetlink.Options.HideLauncherWhenChatWindowOpen = false; 
             Jetlink.Options.IsVisitorEmailOrPhoneRequired = false;
+            Jetlink.Options.Language = "en";
 
             var user = {
                 SourceUserId: "3234234324324",
@@ -176,10 +177,7 @@ _j.onload = function () {
                 Name: "Name here",
                 Surname: "Surname here"
             };
-
             Jetlink.SetUser(user);
-
-            Jetlink.Options.Language = "en";
             
             Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN"); 
 };
