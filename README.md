@@ -8,6 +8,8 @@
 - [Localization](#localization)
 - [User Settings](#user-settings)
 - [Widget Rules](#widget-rules)
+- [Widget Functions](#widget-functions)
+- [Widget Events](#widget-events)
 - [Sample Code](#sample-code)
 
 ## Introduction
@@ -51,9 +53,9 @@ document.head.appendChild(_j);
 ```javascript
 Jetlink.Options.LauncherImageUrl = "http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/chat-2-icon.png";
 ```
-* `LauncherType` - You can change web widget image type using that property. Available Types: "Circular" or "Cornered"
+* `LauncherType` - You can change web widget image type using that property. Available Types: "circular" or "cornered"
 ```javascript
-Jetlink.Options.LauncherType = "Circular";
+Jetlink.Options.LauncherType = "circular";
 ```
 * `ChatWindowBackgroundImageUrl` - Change chat window background image
 ```javascript
@@ -159,6 +161,39 @@ Jetlink.Options.ShowEmailAndPhoneRequest = true;
 
 More rules for our web widget will be added on upcoming releases of our SDK. 
 
+## Widget Functions
+
+* `AddMessage`
+This function can be used to add an informationm essage to Jetlink conversation screen.
+For example, you may need to dispaly a message when the chat window opens for the first time.
+
+```html
+Jetlink.AddMessage("Thank you for visiting our web site.", 3000);
+```
+> Second parameter (3000) is optional. This defines how long typing indicator will be seen on screen. If this parameter is not set, typing indicator will not be displayed.
+
+## Widget Events
+
+* `OnChatWindowFirstOpened`
+This event will be triggered when Jetlink widget launcher clicked only for the first time. Developers can add any javascript code inside of this part. For example you cand send an information message to the user.
+
+```html
+Jetlink.OnChatWindowFirstOpened = function () {
+   Jetlink.AddMessage("Thank you for visiting our web site.", 3000);
+};
+```
+
+* `OnChatWindowOpened`
+This event will be triggered when Jetlink widget launcher clicked every time by the user. 
+Developers can add any javascript code inside of this part. For example you cand send an information message to the user.
+
+```html
+Jetlink.OnChatWindowOpened = function () {
+   launcherIconClickCount++;
+};
+```
+
+
 ## Sample Code
 ```html
 <script type="text/javascript">
@@ -186,5 +221,4 @@ _j.onload = function () {
 document.head.appendChild(_j);
 </script>
 ```
-
 
