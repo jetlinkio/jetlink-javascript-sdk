@@ -172,6 +172,22 @@ Jetlink.AddMessage("Thank you for visiting our web site.", 3000);
 ```
 > Second parameter (3000) is optional. This defines how long typing indicator will be seen on screen. If this parameter is not set, typing indicator will not be displayed.
 
+* `OpenChatWindow`
+This function can be used to open jetlink chat window programmatically.
+You need to call Jetlink.OpenChatWindow(); after Jetlink widget initialized and shown on screen.
+
+```html
+Jetlink.OpenChatWindow();
+```
+
+* `CloseChatWindow`
+This function can be used to close jetlink chat window programmatically, after it opened.
+You need to call Jetlink.CloseChatWindow(); after Jetlink chat window is opened and shown on screen.
+
+```html
+Jetlink.CloseChatWindow();
+```
+
 ## Widget Events
 
 * `OnChatWindowFirstOpened`
