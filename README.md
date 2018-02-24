@@ -1,24 +1,24 @@
-# Jetlink Javascript SDK for our Live-Web-Widget
+# Jetlink Javascript SDK for our Web Messenger
 [![Website](https://app.jetlink.io/Assets/custom/img/jetlink-logo-medium.png)](https://jetlink.io)
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Quick step for Jetlink Web Widget Installation](#quick-step-for-jetlink-web-widget-installation)
-- [Widget Settings](#widget-settings)
+- [Quick step for Jetlink Web Messenger Installation](#quick-step-for-jetlink-web-widget-installation)
+- [Messenger Settings](#widget-settings)
 - [Localization](#localization)
 - [User Settings](#user-settings)
-- [Widget Rules](#widget-rules)
-- [Widget Functions](#widget-functions)
-- [Widget Events](#widget-events)
+- [Messenger Rules](#widget-rules)
+- [Messenger Functions](#widget-functions)
+- [Messenger Events](#widget-events)
 - [Sample Code](#sample-code)
 
 ## Introduction
 
-You can use Jetlink Javascript SDK to customize our web widget for your own web site. There are lots of different options to use Jetlink live chat web widget to use with your custom needs. Appearance of web widget can be changed. And also different functionalites can be applied for how our web widget will work. 
+You can use Jetlink Javascript SDK to customize our web messenger for your own web site. There are lots of different options to use Jetlink web messenger to use with your custom needs. Appearance of web messenger can be changed. And also different functionalites can be applied for how our web messenger will work. 
 
-## Quick step for Jetlink Web Widget Installation
+## Quick step for Jetlink Web Messenger Installation
 
-Include the Jetlink plugin and initialization line on your web page before closing </ body> tag on your all pages that you want to show Jetlink Web Widget
+Copy and paste Jetlink messenger code on your web page before closing </ body> tag. You must include this code snippet to all your pages that you want to show Jetlink Web Messenger.
 ```html
 <script type="text/javascript">
 var _j = document.createElement("script");
@@ -38,7 +38,7 @@ _j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(
 _j.onload = function () { 
             // JETLINK CUSTOMIZATION PART
             // ....
-            // Jetlink.Options.ThemeColor = "#900";
+            // Jetlink.Options.ShowEmojiButton = true;
             // ...
             
             Jetlink.Init("YOUR-APP-ID", "YOUR-APP-TOKEN"); 
@@ -65,42 +65,119 @@ Jetlink.Options.ChatWindowBackgroundImageUrl = "https://openclipart.org/image/80
 ```javascript
 Jetlink.Options.MessageTextBoxPlaceholder = "Type your message...";
 ```
-* `ThemeColor` - You can change widget window colors for your web site color harmony
+* `ShowEmojiButton` - To show or hide emoji button.
 ```javascript
-Jetlink.Options.ThemeColor = "#900";
+Jetlink.Options.ShowEmojiButton = true;
 ```
-* `FontFamily` - You can change widget font family
+* `ShowAttachmentButton` - To show or hide attachment button.
 ```javascript
-Jetlink.Options.FontFamily = "Calibri";
+Jetlink.Options.ShowAttachmentButton = true;
 ```
-* `ShowEmojiButton` - You can hide or show the emoji button
+* `FontFamily` - to change the font family
 ```javascript
-Jetlink.Options.ShowEmojiButton = false;
-```
-* `ShowAttachmentButton` - You can hide or show the attachment button.
-```javascript
-Jetlink.Options.ShowAttachmentButton = false;
-```
-* `Height` - You can set your live-web widget window height by this property in terms of pixels.
-```javascript
-Jetlink.Options.Height = 600;
-```
-* `LauncherHeight` - You can set your live-web widget launcher height by this property in terms of pixels.
-```javascript
-Jetlink.Options.LauncherHeight = 80;
-```
-* `LauncherWidth` - You can set your live-web widget launcher width by this property in terms of pixels.
-```javascript
-Jetlink.Options.LauncherWidth = 80;
+Jetlink.Options.FontFamily = "Arial";
 ```
 * `LauncherStyleBehaviour` - If LauncherStyleBehaviour has been set, LauncherHeight and LauncherWidth is applied. Available Behaviours: "default" and "custom"
 ```javascript
 Jetlink.Options.LauncherStyleBehaviour = "default";
 ```
+* `LauncherHeight` - height for chat launcher image
+```javascript
+Jetlink.Options.LauncherHeight = "100"
+```
+* `LauncherWidth` - width for chat launcher image
+```javascript
+Jetlink.Options.LauncherWidth = "100";
+```
+* `Height` - height for messenger window
+```javascript
+Jetlink.Options.Height = "500";
+```
+* `LauncherBorderColor` - Border color of launcher button
+```javascript
+Jetlink.Options.LauncherBorderColor = "#ccc";
+```
+* `NewConversationButtonBackgroundColor`
+```javascript
+Jetlink.Options.NewConversationButtonBackgroundColor = "#cdcdcd";
+```
+* `NewConversationButtonFontColor` 
+```javascript
+Jetlink.Options.NewConversationButtonFontColor = "#cdcdcd";
+```
+* `HeaderGeneralFontColor`
+```javascript
+Jetlink.Options.HeaderGeneralFontColor = "#cdcdcd";
+```
+* `ConversationListPageGeneralFontColor`
+```javascript
+Jetlink.Options.ConversationListPageGeneralFontColor = "#cdcdcd";
+```
+* `EditorPageGeneralFontColor`
+```javascript
+Jetlink.Options.EditorPageGeneralFontColor = "#cdcdcd";
+```
+* `AgentMessageBackgroundColor`
+```javascript
+Jetlink.Options.AgentMessageBackgroundColor = "#cdcdcd";
+```
+* `AgentMessageFontColor`
+```javascript
+Jetlink.Options.AgentMessageFontColor = "#cdcdcd";
+```
+* `UserMessageBackgroundColor`
+```javascript
+Jetlink.Options.UserMessageBackgroundColor = "#cdcdcd";
+```
+* `UserMessageFontColor`
+```javascript
+Jetlink.Options.UserMessageFontColor = "#cdcdcd";
+```
+* `EditorPageBackButtonBackgroundColor`
+```javascript
+Jetlink.Options.EditorPageBackButtonBackgroundColor = "#cdcdcd";
+```
+* `HeaderAvatarImageBorderColor`
+```javascript
+Jetlink.Options.HeaderAvatarImageBorderColor = "#cdcdcd";
+```
+* `EmojiButtonBackgroundColor`
+```javascript
+Jetlink.Options.EmojiButtonBackgroundColor = "#cdcdcd";
+```
+* `EmojiButtonInnerColor`
+```javascript
+Jetlink.Options.EmojiButtonInnerColor = "#cdcdcd";
+```
+* `AttachmentButtonBackgroundColor`
+```javascript
+Jetlink.Options.AttachmentButtonBackgroundColor = "#cdcdcd";
+```
+* `AttachmentButtonInnerColor`
+```javascript
+Jetlink.Options.AttachmentButtonInnerColor = "#cdcdcd";
+```
+* `EditorPageAgentImageListWindowBorderLineColor`
+```javascript
+Jetlink.Options.EditorPageAgentImageListWindowBorderLineColor = "#cdcdcd";
+```
+* `MessageStatusFontColor`
+```javascript
+Jetlink.Options.MessageStatusFontColor = "#cdcdcd";
+```
+* `HeaderGeneralBackgroundColor`
+```javascript
+Jetlink.Options.HeaderGeneralBackgroundColor = "#cdcdcd";
+```
+* `GeneralBackgroundColor`
+```javascript
+Jetlink.Options.GeneralBackgroundColor = "#cdcdcd";
+```
+
 
 ## Localization
 
-You can localize jetlink web widget with your own language settings by just the one line of code. Now, we are supporting English and Turkish. More languages are coming soon.
+You can localize jetlink web widget with your own language settings by just the one line of code. Now, Jetlink supports English and Turkish. More languages are coming soon.
 
 Turkish: "tr"
 English: "en"
@@ -132,14 +209,32 @@ You need to set user information after **Jetlink.Init(...)** line
 
 ## Widget Rules
 
-* `IsVisitorEmailOrPhoneRequired`
-You can make mandatory for email address or phone number enterence by visitors. 
-If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address or phone number. After entering email address, the visitor can start to chat with a live agent.
-
-Here is the code block.
+* `ShowContactInfoRequest`
+You can collect contact information of your visitors.
+After adding this line, you should also define which parts of user contact info will be collected.
+These options are listed below.
 
 ```javascript
-Jetlink.Options.IsVisitorEmailOrPhoneRequired = true;
+Jetlink.Options.ContactInfoNameIsExists = true | false;
+Jetlink.Options.ContactInfoNameIsRequired = true | false;
+Jetlink.Options.ContactInfoSurnameIsExists = true | false;
+Jetlink.Options.ContactInfoSurnameIsRequired = true | false;
+Jetlink.Options.ContactInfoEmailIsExists = true | false;
+Jetlink.Options.ContactInfoEmailIsRequired = true | false;
+Jetlink.Options.ContactInfoPhoneIsExists = true | false;
+Jetlink.Options.ContactInfoPhoneIsRequired = true | false;
+Jetlink.Options.ContactInfoGenderIsExists = true | false;
+Jetlink.Options.ContactInfoGenderIsRequired = true | false;
+Jetlink.Options.ContactInfoAgreementIsExists = true | false;
+Jetlink.Options.ContactInfoAgreementIsRequired = true | false;
+Jetlink.Options.ContactInfoAgreementLink = "";
+Jetlink.Options.ContactInfoAgreementText = "";
+```
+
+* `IsVisitorContactInfoRequired`
+If you want to make mandatory to enter contact information, you should set this property as true.
+```javascript
+Jetlink.Options.IsVisitorContactInfoRequired = true;
 ```
 
 * `HideLauncherWhenChatWindowIsOpen`
@@ -149,17 +244,7 @@ You can hide launcher when chat windows is open.
 Jetlink.Options.HideLauncherWhenChatWindowIsOpen = true;
 ```
 
-* `ShowEmailAndPhoneRequest`
-You can make mandatory for email address and phone number enterence by visitors. 
-If you add this line of code and make the property true, our web widget will ask visitors to enter his/her email address and phone number without required.
-
-Here is the code block.
-
-```javascript
-Jetlink.Options.ShowEmailAndPhoneRequest = true;
-```
-
-More rules for our web widget will be added on upcoming releases of our SDK. 
+More rules for our web messenger will be added on upcoming releases of our Jetlink Javascript SDK. 
 
 ## Widget Functions
 
@@ -216,13 +301,6 @@ Jetlink.OnChatWindowOpened = function () {
 var _j = document.createElement("script");
 _j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(Date()).getTime() / 1000);
 _j.onload = function () { 
-            Jetlink.Options.LauncherType = "cornered";
-            Jetlink.Options.ShowEmailAndPhoneRequest = true;
-            Jetlink.Options.ThemeColor = "#900";
-            Jetlink.Options.HideLauncherWhenChatWindowIsOpen = false; 
-            Jetlink.Options.IsVisitorEmailOrPhoneRequired = false;
-            Jetlink.Options.Language = "en";
-
             var user = {
                 SourceUserId: "3234234324324",
                 Email: "testuser@jetlink.io",
@@ -237,4 +315,3 @@ _j.onload = function () {
 document.head.appendChild(_j);
 </script>
 ```
-
