@@ -11,7 +11,7 @@
 - [Messenger Functions](#widget-functions)
 - [Messenger Events](#widget-events)
 - [Sample Code](#sample-code)
-
+  
 ## Introduction
 
 You can use Jetlink Javascript SDK to customize our web messenger for your own web site. There are lots of different options to use Jetlink web messenger to use with your custom needs. Appearance of web messenger can be changed. And also different functionalites can be applied for how our web messenger will work. 
