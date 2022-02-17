@@ -306,7 +306,6 @@ Such use cases can be applied on Jetlink Proactive Messages.
 Do to this, you can easily use Jetlink AddCampaignMessage javascript function by a few lines of code. 
 Sending text based proactive message
 ```html
-<script type="text/javascript">
 if (typeof Jetlink != "undefined")
 {
   var messageObject =
@@ -315,10 +314,10 @@ if (typeof Jetlink != "undefined")
   };
   Jetlink.AddCampaignMessage(messageObject);
 }
-</script>
 ```
 
 Sending rich proactive message
+```html
 if (typeof Jetlink != "undefined")
 {
   var messageObject =
@@ -332,6 +331,8 @@ if (typeof Jetlink != "undefined")
 }
 </script>
 ```
+
+Real life functionalities of Jetlink platform is limitless. Whole of your business rules, internal processes and business needs can be applied using Jetlink Proactive messaging system. Our Javascript SDK functions can help you by developing every single messaging purposes.
 
 
 ## Sample Code
