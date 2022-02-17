@@ -10,6 +10,7 @@
 - [Messenger Rules](#widget-rules)
 - [Messenger Functions](#widget-functions)
 - [Messenger Events](#widget-events)
+- [Jetlink Proactive Messages](#proactive-messages)
 - [Sample Code](#sample-code)
   
 ## Introduction
@@ -293,6 +294,16 @@ Jetlink.OnChatWindowOpened = function () {
    launcherIconClickCount++;
 };
 ```
+
+## Jetlink Proactive Messages
+You can use Jetlink AddCampaignMessage javascript function to send instant messages to the user who is currently viewing your web site.
+
+Such use cases can be applied on Jetlink Proactive Messages.
+- When a user facing a problem on the payment page of your web site, you can send an Jetlink instant proactive message.
+- When a user facing a problem on the signp up page of your web site, you can send an Jetlink instant proactive message.
+- If the user clicks any button or makes any event on your page, you can send an Jetlink instant proactive message according to your internal businesss rules.
+
+Do to this, you can easliy use Jetlink AddCampaignMessage javascript function by a few lines of code. 
 
 
 ## Sample Code
