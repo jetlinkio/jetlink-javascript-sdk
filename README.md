@@ -305,7 +305,7 @@ Such use cases can be applied on Jetlink Proactive Messages.
 
 Do to this, you can easily use Jetlink AddCampaignMessage javascript function by a few lines of code. 
 Sending text based proactive message
-```html
+```javascript
 if (typeof Jetlink != "undefined")
 {
   var messageObject =
