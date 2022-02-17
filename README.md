@@ -1,5 +1,5 @@
 # Jetlink Javascript SDK for our Web Messenger
-[![Website](https://app.jetlink.io/Assets/img/jetlink-logo-medium.png)](https://jetlink.io)
+[![Website](https://app.jetlink.io/Assets/img/jetlink-logo.png)](https://jetlink.io)
 ## Table of Contents
 
 - [Introduction](#introduction)
