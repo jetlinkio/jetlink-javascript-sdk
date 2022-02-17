@@ -253,7 +253,7 @@ More rules for our web messenger will be added on upcoming releases of our Jetli
 This function can be used to add an informationm essage to Jetlink conversation screen.
 For example, you may need to dispaly a message when the chat window opens for the first time.
 
-```html
+```javascript
 Jetlink.AddMessage("Thank you for visiting our web site.", 3000);
 ```
 > Second parameter (3000) is optional. This defines how long typing indicator will be seen on screen. If this parameter is not set, typing indicator will not be displayed.
@@ -262,7 +262,7 @@ Jetlink.AddMessage("Thank you for visiting our web site.", 3000);
 This function can be used to open jetlink chat window programmatically.
 You need to call Jetlink.OpenChatWindow(); after Jetlink widget initialized and shown on screen.
 
-```html
+```javascript
 Jetlink.OpenChatWindow();
 ```
 
@@ -270,7 +270,7 @@ Jetlink.OpenChatWindow();
 This function can be used to close jetlink chat window programmatically, after it opened.
 You need to call Jetlink.CloseChatWindow(); after Jetlink chat window is opened and shown on screen.
 
-```html
+```javascript
 Jetlink.CloseChatWindow();
 ```
 
@@ -279,7 +279,7 @@ Jetlink.CloseChatWindow();
 * `OnChatWindowFirstOpened`
 This event will be triggered when Jetlink widget launcher clicked only for the first time. Developers can add any javascript code inside of this part. For example you cand send an information message to the user.
 
-```html
+```javascript
 Jetlink.OnChatWindowFirstOpened = function () {
    Jetlink.AddMessage("Thank you for visiting our web site.", 3000);
 };
@@ -289,7 +289,7 @@ Jetlink.OnChatWindowFirstOpened = function () {
 This event will be triggered when Jetlink widget launcher clicked every time by the user. 
 Developers can add any javascript code inside of this part. For example you cand send an information message to the user.
 
-```html
+```javascript
 Jetlink.OnChatWindowOpened = function () {
    launcherIconClickCount++;
 };
@@ -317,7 +317,7 @@ if (typeof Jetlink != "undefined")
 ```
 
 Sending rich proactive message
-```html
+```javascript
 if (typeof Jetlink != "undefined")
 {
   var messageObject =
